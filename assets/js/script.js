@@ -18,7 +18,7 @@ async function calcular(indicador, clp) {
 }
 function refreshResultado(x) {
     const seccionResultado = document.getElementById("seccionResultado");
-    seccionResultado.innerHTML = x;
+    seccionResultado.innerHTML = `Resultado: $${x}`;
 }
 function getMoneda() {
     const tipoMoneda = document.getElementById("tipoMoneda").value;
@@ -70,8 +70,8 @@ function onClickBuscar() {
     });
 }
 function limpiar() {
-    const seccionResultado = document.getElementById("inputCLP");
-    seccionResultado.value = "";
+    const x = document.getElementById("inputCLP");
+    x.value = "";
 }
 function cargaInicial() {
     onClickBuscar();
