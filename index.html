@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+</head>
+
+<body>
+    <div>
+        <h1>Conversor de monedas Nacionales</h1>
+        <div>
+            <h2>Peso Chileno</h2>
+            <input id="inputCLP" type="text">
+            <h3>Convertir a:</h3>
+            <select id="tipoMoneda">
+                <option value="dolar">Dolar</option>
+                <option value="euro">Euro</option>
+            </select>
+            <input type="button" id="buttonBuscar" value="Buscar">
+            <div id="seccionResultado"></div>
+            <div id="seccionError"></div>
+        </div>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+
+</html>
