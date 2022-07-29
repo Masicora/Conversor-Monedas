@@ -11,20 +11,27 @@
 </head>
 
 <body>
-    <div>
+    <div class="container bg-dark text-bg-dark p-2 text-center">
+        <hr>
         <h1>Conversor de monedas Nacionales</h1>
-        <div>
-            <h2>Peso Chileno</h2>
-            <input id="inputCLP" type="number">
-            <h3>Convertir a:</h3>
-            <select id="tipoMoneda">
-                <option value="dolar">Dolar</option>
-                <option value="euro">Euro</option>
-            </select>
-            <button type="button" id="buttonBuscar">Convertir</button>
-            <div id="seccionResultado">...</div>
-            <div id="seccionError"></div>
+        <hr>
+        <div class="card bg-secondary m-auto w-50 p-2">
+            <h2 class="h2">Peso Chileno</h2>
+            <div>
+                <input class="form-control" id="inputCLP" type="number">
+            </div>
+            <h3 class="h3">Convertir a:</h3>
+            <div>
+                <select class="form-control" id="tipoMoneda">
+                    <option value="dolar">Dolar</option>
+                    <option value="euro">Euro</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="button" id="buttonBuscar">Convertir</button>
+            <h4 class="m-2 h4" id="seccionResultado">...</h4>
+            <div class="m-2" id="seccionError"></div>
         </div>
+        <hr>
         <div>
             <canvas id="myChart"></canvas>
         </div>
