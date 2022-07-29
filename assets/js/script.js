@@ -57,11 +57,16 @@ function loadGraph(x) {
 }
 async function buscar() {
     const inputCLP = parseInt(document.getElementById("inputCLP").value);
-    const tipoMoneda = document.getElementById("tipoMoneda").value;
-    const monedaSeleccionada = await buscadorMonedas(tipoMoneda);
-    const calculo = await calcular(monedaSeleccionada, inputCLP);
-    refreshResultado(calculo);
-    loadGraph(monedaSeleccionada);
+    if (inputCLP > 0) {
+        const tipoMoneda = document.getElementById("tipoMoneda").value;
+        const monedaSeleccionada = await buscadorMonedas(tipoMoneda);
+        const calculo = await calcular(monedaSeleccionada, inputCLP);
+        refreshResultado(calculo);
+        loadGraph(monedaSeleccionada);
+    }
+    else {
+        alert("Ingrese un monto válido");
+    }
 }
 function onClickBuscar() {
     const buttonBuscar = document.getElementById("buttonBuscar");
